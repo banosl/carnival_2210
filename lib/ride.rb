@@ -18,8 +18,12 @@ class Ride
     if !ride_log.include?(visitor)
       ride_log[visitor] = 0
       ride_log[visitor] += 1
+      visitor.spend(admission_fee)
+      @total_revenue += @admission_fee
     else
       ride_log[visitor] += 1
+      visitor.spend(admission_fee)
+      @total_revenue += @admission_fee
     end
   end
 end
