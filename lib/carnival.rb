@@ -14,7 +14,7 @@ class Carnival
   end
 
   def most_popular_ride
-    popular = @rides.sort_by do |ride| 
+    popular = @rides.sort_by do |ride|
       ride.total_rides
     end
     popular.last

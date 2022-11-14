@@ -65,13 +65,15 @@ RSpec.describe Carnival do
       end
 
       it 'carnival can tell us its most popular ride' do
-        # binding.pry
         expect(@carnival.most_popular_ride).to eq(@ride3)
       end
 
       it 'carnival can tell us its most profitable ride' do
-        # binding.pry
         expect(@carnival.most_profitable_ride).to eq(@ride2)
+      end
+
+      it 'carnival can calculate the total revenue from all rides' do
+        expect(@carnival.total_revenue).to eq(43)
       end
     end
   end
