@@ -72,4 +72,10 @@ RSpec.describe Ride do
     expect(ride3.ride_log).to eq({ visitor3 => 1 })
     expect(ride3.total_revenue).to eq(2)
   end
+
+  it 'ride can list the total rides taken' do
+    expect(ride1.total_rides).to eq(3)
+    expect(ride2.total_rides).to eq(0)
+    expect(ride3.total_rides).to eq(2)
+  end
 end
