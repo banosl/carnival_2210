@@ -26,4 +26,12 @@ class Carnival
     end
     profitable.last
   end
+
+  def total_revenue
+    total = 0
+    @rides.each do |ride|
+      total += ride.total_revenue
+    end
+    total
+  end
 end

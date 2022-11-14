@@ -73,7 +73,7 @@ RSpec.describe Carnival do
       end
 
       it 'carnival can calculate the total revenue from all rides' do
-        expect(@carnival.total_revenue).to eq(43)
+        expect(@carnival.total_revenue).to eq(33)
       end
     end
   end
