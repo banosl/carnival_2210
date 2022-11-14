@@ -69,7 +69,7 @@ RSpec.describe Ride do
     expect(visitor1.spending_money).to eq(8)
     expect(visitor2.spending_money).to eq(4)
     expect(visitor3.spending_money).to eq(13)
-    expect(ride3.rider_log).to eq({visitor3 => 1})
+    expect(ride3.ride_log).to eq({visitor3 => 1})
     expect(ride3.total_revenue).to eq(2)
   end
 end
