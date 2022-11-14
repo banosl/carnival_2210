@@ -2,7 +2,8 @@ class Carnival
   attr_reader :name,
               :duration,
               :rides
-  def initialize (name, duration)
+
+  def initialize(name, duration)
     @name = name
     @duration = duration
     @rides = []
@@ -13,6 +14,16 @@ class Carnival
   end
 
   def most_popular_ride
-    binding.pry
+    popular = @rides.sort_by do |ride| 
+      ride.total_rides
+    end
+    popular.last
+  end
+
+  def most_profitable_ride
+    profitable = @rides.sort_by do |ride|
+      ride.total_revenue
+    end
+    profitable.last
   end
 end

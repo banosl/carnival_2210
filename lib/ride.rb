@@ -20,11 +20,11 @@ class Ride
       ride_log[visitor] = 0
       ride_log[visitor] += 1
       visitor.spend(admission_fee)
-      @total_revenue += @admission_fee
+      add_revenue(@admission_fee)
     elsif ride_log.include?(visitor) && visitor.spending_money >= @admission_fee
       ride_log[visitor] += 1
       visitor.spend(admission_fee)
-      @total_revenue += @admission_fee
+      add_revenue(@admission_fee)
     end
   end
 
@@ -34,5 +34,9 @@ class Ride
       rides += ride[1]
     end
     rides
+  end
+
+  def add_revenue(admission_fee)
+    @total_revenue += admission_fee
   end
 end

@@ -47,7 +47,6 @@ RSpec.describe Carnival do
       @ride3.board_rider(@visitor4)
       @ride3.board_rider(@visitor4)
       @ride3.board_rider(@visitor4)
-      @ride3.board_rider(@visitor4)
     end
 
     it 'carnival can add and list out its rides' do
@@ -66,10 +65,12 @@ RSpec.describe Carnival do
       end
 
       it 'carnival can tell us its most popular ride' do
+        # binding.pry
         expect(@carnival.most_popular_ride).to eq(@ride3)
       end
 
       it 'carnival can tell us its most profitable ride' do
+        # binding.pry
         expect(@carnival.most_profitable_ride).to eq(@ride2)
       end
     end
