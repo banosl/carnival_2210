@@ -27,4 +27,12 @@ class Ride
       @total_revenue += @admission_fee
     end
   end
+
+  def total_rides
+    rides = 0
+    self.ride_log.each do |ride|
+      rides += ride[1]
+    end
+    rides
+  end
 end
