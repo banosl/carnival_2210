@@ -7,4 +7,12 @@ class Carnival
     @duration = duration
     @rides = []
   end
+
+  def add_ride(ride)
+    @rides.push(ride)
+  end
+
+  def most_popular_ride
+    binding.pry
+  end
 end
