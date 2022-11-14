@@ -13,4 +13,13 @@ class Ride
     @total_revenue = 0
     @ride_log = {}
   end
+
+  def board_rider(visitor)
+    if !ride_log.include?(visitor)
+      ride_log[visitor] = 0
+      ride_log[visitor] += 1
+    else
+      ride_log[visitor] += 1
+    end
+  end
 end
