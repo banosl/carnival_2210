@@ -49,10 +49,18 @@ RSpec.describe Carnival do
     @ride3.board_rider(@visitor4)
   end
   
-  it "carnival can tell us its most popular ride" do
-    # expect(carnival.most_popular_ride).to eq(@ride3)
+  it "carnival can add and list out its rides" do
+    @carnival.add_ride(@ride1)
+    @carnival.add_ride(@ride2)
+    @carnival.add_ride(@ride3)
 
+    expect(@carnival.rides).to eq([@ride1, @ride2, @ride3])
   end
+
+#   it "carnival can tell us its most popular ride" do
+#     expect(@carnival.most_popular_ride).to eq(@ride3)
+
+#   end
 
 
 
