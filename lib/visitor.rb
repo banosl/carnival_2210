@@ -15,4 +15,7 @@ class Visitor
     @preferences.push(preference)
   end
 
+  def tall_enough?(height_minimum)
+    @height >= height_minimum
+  end
 end
