@@ -19,8 +19,7 @@ RSpec.describe Visitor do
     visitor1.add_preference(:gentle)
     visitor1.add_preference(:water)
 
-    expect(visitor1.preferences).to eq([:gentle, :water])
-
+    expect(visitor1.preferences).to eq(%i[gentle water])
   end
 
   it 'visitor can check if visitors are tall enough for the ride' do
@@ -37,9 +36,7 @@ RSpec.describe Visitor do
   it 'visitor can spend money' do
     visitor1 = Visitor.new('Bruce', 54, '$10')
     visitor1.spend(1)
-    
+
     expect(visitor1.spending_money).to eq(9)
   end
-
-
 end

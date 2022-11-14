@@ -5,6 +5,7 @@ class Ride
               :excitement,
               :total_revenue,
               :ride_log
+
   def initialize(attributes)
     @name = attributes[:name]
     @min_height = attributes[:min_height]
