@@ -36,7 +36,7 @@ RSpec.describe Visitor do
 
   it 'visitor can spend money' do
     visitor1 = Visitor.new('Bruce', 54, '$10')
-    visitor1.spend(fee)
+    visitor1.spend(1)
     
     expect(visitor1.spending_money).to eq(9)
   end
