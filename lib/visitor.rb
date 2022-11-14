@@ -11,5 +11,8 @@ class Visitor
     @preferences = []
   end
 
+  def add_preference(preference)
+    @preferences.push(preference)
+  end
 
 end
