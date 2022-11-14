@@ -30,7 +30,7 @@ class Ride
 
   def total_rides
     rides = 0
-    self.ride_log.each do |ride|
+    ride_log.each do |ride|
       rides += ride[1]
     end
     rides

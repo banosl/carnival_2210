@@ -30,6 +30,14 @@ RSpec.describe Ride do
     expect(ride1.ride_log).to eq({ visitor1 => 2, visitor2 => 1 })
   end
 
+  it 'add_revenue can add to the rides total revenue' do
+    ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
+    ride1.add_revenue(1)
+    ride1.add_revenue(1)
+
+    expect(ride1.total_revenue).to eq(2)
+  end
+
   it 'riders are charged admission fees when they board' do
     ride1 = Ride.new({ name: 'Carousel', min_height: 24, admission_fee: 1, excitement: :gentle })
     visitor1 = Visitor.new('Bruce', 54, '$10')
